@@ -129,25 +129,35 @@ for(i in a){
 }
 
 # 1-2+3-4+...-100 = -50 출력
-sum <-0
+
 for(i in 1:100){
-  if(i == 100){
-    sum <- sum - i
-    cat(i,"= ",sum)
-  }else if(i %% 2 == 0){
-    sum <- sum -i
+  if(i == 100)
+    cat(i,"= ",sum(seq(from=1,to=99,by=2))-sum(seq(from=2,to=100,by=2)))
+  else if(i %% 2 == 0)
     cat(i,"+ ")
-  }else {
-    sum <- sum +i
-    cat(i,"- ")}
+  else 
+    cat(i,"- ")
 }
 
-
-
-
-
-
-
+# Grade Report
+name <- "홍길동"
+kor <- 89
+math <-90
+eng <-90
+cat("이름 : ",name,"총점 : ",(kor+math+eng),
+    "평균 : ",round(((kor+math+eng)/3),2),
+    "학점 : ",(switch(
+                  toString((kor+math+eng)%/%30),
+                  "10" = "A",
+                  "9" = "A",
+                  "8" = "B",
+                  "7" = "C",
+                  "6" = "D",
+                  "5" = "E",
+                  "F"
+                )
+             )
+)
 
 
 
