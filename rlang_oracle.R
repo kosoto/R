@@ -12,5 +12,5 @@ conn <- dbConnect(drv,
                   "jdbc:oracle:thin:@localhost:1521:xe",
                   "kstad",
                   "1234")
-rst <- dbGetQuery(conn, "SELECT * FROM TEAMZ")
-rst
+dbGetQuery(conn, "SELECT * FROM TAB")
+

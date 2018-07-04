@@ -10,6 +10,7 @@ hist(c(9,13,21,8,36,22,12,41,31,33,19),xlab = "Weight",col = "yellow",border = "
 plot(c(7,12,28,3,41),type = "o")
 ## 산포도
 input <- mtcars[,c('wt','mpg')]
+mtcars
 print(input)
 plot(x = input$wt,y = input$mpg,
      xlab = "Weight",
